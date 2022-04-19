@@ -1,0 +1,37 @@
+<div class="header-spec">
+  <div class="logo">
+    <img src="https://it.mobifone.vn/wp-content/uploads/logo-mbf.png" alt="Description" />
+  </div>
+  <div>
+    <ul nz-menu nzMode="horizontal">
+      <li nz-menu-item>
+        <i nz-icon nzType="setting" nzTheme="outline"></i>
+        <span>Quảng lý</span>
+        <i nz-icon nzType="down"></i>
+      </li>
+      <li nz-menu-item>
+        <i nz-icon nzType="line-chart" nzTheme="outline"></i>
+        <span>Báo cáo</span>
+        <i nz-icon nzType="down"></i>
+      </li>
+      <li nz-menu-item>
+        <i nz-icon nzType="file" nzTheme="outline"></i>
+        <span>Tài liệu</span>
+        <i nz-icon nzType="down"></i>
+      </li>
+    </ul>
+  </div>
+  <div class="right-header">
+    <ng-template #searchIcoin>
+      <i nz-icon nzType="search"></i>
+    </ng-template>
+    <nz-input-group [nzPrefix]="searchIcoin">
+      <input type="text" placeholder="Tìm kiếm" nz-input />
+    </nz-input-group>
+    <i nz-icon nzType="plus-circle" style="font-size: 30px; color: #40c0ff; margin-left: 10px;" nzTheme="fill"></i>
+    <i nz-icon nzType="message" style="font-size: 30px; margin-left: 30px;" nzTheme="outline"></i>
+    <i nz-icon nzType="bell" style="font-size: 30px; margin-left: 10px;" nzTheme="outline"></i>
+    <i nz-icon nzType="meh" style="font-size: 30px; margin-left: 20px;" nzTheme="outline"></i>
+  </div>
+
+</div>

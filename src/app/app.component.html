@@ -1,0 +1,39 @@
+<nz-layout class="app-layout">
+  <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
+    [nzTrigger]="null">
+    <div class="sidebar-logo" (click)="isCollapsed = !isCollapsed">
+      <i *ngIf="isCollapsed" nz-icon nzType="double-right" style="font-size: 20px; color: white;"></i>
+      <i *ngIf="!isCollapsed" nz-icon nzType="double-left" style="font-size: 20px; color: white;"></i>
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu nzOpen nzTitle="Home" nzIcon="home">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">Welcome</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzOpen nzTitle="Form" nzIcon="field-time">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a>Basic Form</a>
+          </li>
+        </ul>
+      </li>
+      <i nz-icon nzType="setting" style="position: fixed;bottom: 25px; left: 25px;font-size: 25px;" nzTheme="outline"></i>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <div class="app-header">
+        <!-- Header -->
+        <app-header></app-header>
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
